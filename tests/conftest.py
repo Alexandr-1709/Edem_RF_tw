@@ -1,9 +1,6 @@
-import pickle
-import time
 import pytest
 from selene.support.shared import browser
-import requests
-from edem_rf.model.data.data_for_tests import base_url, jwt_token, user_url
+from edem_rf.model.data.data_for_tests import base_url, jwt_token, user_url, profile_url
 
 
 @pytest.fixture(scope='function', autouse=True)
@@ -13,15 +10,16 @@ def driver_management_remote():
     browser.config.window_height = 1080
     browser.config.timeout = 5.0
 
-
     yield browser
-    for cookie in pickle.load(open('authorization_cookies', 'rb')):
-        browser.driver.add_cookie(cookie)
-    time.sleep(5.0)
-    browser.driver.refresh()
-    time.sleep(10)
     browser.quit()
 
+# @pytest.fixture()
+# def load_cookies(driver_management_remote):
+#     for cookie in pickle.load(open('authorization_cookies', 'rb')):
+#         browser.driver.add_cookie(cookie)
+#     time.sleep(5.0)
+#     browser.driver.refresh()
+#     time.sleep(10)
 
 
 # @pytest.fixture()
