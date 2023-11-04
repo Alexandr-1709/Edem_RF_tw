@@ -6,7 +6,7 @@ class CustomDetailsTour:
 
     def create_comments(self):
         browser.element('[name=comment]').should(be.visible).click()
-        browser.element('[name=comment]').type('Весёлая будет поездочка!!!')
+        browser.element('[name=comment]').type('Тестовая публикация для проверки приложения. НЕ ОПЛАЧИВАТЬ!!!')
         return self
 
     def submit_detail(self):

@@ -1,5 +1,5 @@
 from selene.support.shared import browser
-from selene import have
+from selene import have, be
 
 
 class MyAd:
@@ -12,4 +12,7 @@ class MyAd:
         return self
 
     def check_successful_publication(self):
-        browser.element('[type=submit]').should(have.text('Объявление опубликовано!'))
+        browser.element('.create_route-success_caption').should(be.visible)
+        browser.element('.create_route-success_caption').\
+            should(have.text('опубликовано!'))
+        return self

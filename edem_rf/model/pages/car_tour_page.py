@@ -2,6 +2,8 @@ import allure
 from selene.support.shared import browser
 from selene import be, command
 
+from edem_rf.model.data.data_for_tests import city_from, city_to
+
 
 class CarTourPage:
     def open_create_car_tour_page(self):
@@ -16,7 +18,7 @@ class CarTourPage:
             browser.element('#js-routes-drafts-select-search-from') \
                 .should(be.visible)
             browser.element('#js-routes-drafts-select-search-from').click(). \
-                type('Екатеринбург')
+                type(city_from)
 
             elements = browser.element('.form-dropdown-city')
             elements.element("//div[contains(text(),'Екатеринбург')]").click()
@@ -26,7 +28,7 @@ class CarTourPage:
                 type('м. Ботаническая')
 
             browser.element('#js-routes-drafts-select-search-to').click(). \
-                type('Пермь')
+                type(city_to)
 
             elements = browser.element('.form-dropdown-city')
             elements.element("//div[contains(text(),'Пермь')]").click()

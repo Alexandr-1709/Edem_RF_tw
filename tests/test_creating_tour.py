@@ -1,4 +1,6 @@
+import pickle
 import time
+from selene.support.shared import browser
 import allure
 from edem_rf.model import app
 from allure_commons.types import Severity
@@ -49,14 +51,21 @@ def test_creating_tour():
         app.payment_method.submit_payment_method()
     with allure.step('Подтвердить карту-опубликовать поездку'):
         app.my_cart.to_publish()
-    with allure.step('Оплатить объявление о поездке'):
-        app.my_ad.to_pay()
 
     # THEN
-    with allure.step('Проверка успешной публикации'):
+    with allure.step('Проверка сообщения об успешной публикации'):
         app.my_ad.check_successful_publication()
+    with allure.step('Проверка наличия поездки в листе поездок'):
+        app.main_page.open_burger_menu()
+        app.main_page.open_my_list_tour_page()
+        app.list_tour.check_creation_tour()
 
-    time.sleep(10)
+
+
+
+
+
+
 
 # def test_auth_jwt_token():
 # session = requests.Session()

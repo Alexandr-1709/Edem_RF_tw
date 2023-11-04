@@ -1,5 +1,6 @@
-from selene.support.shared import browser
+import pickle
 
+from selene.support.shared import browser
 
 
 class MyCart:
@@ -10,3 +11,5 @@ class MyCart:
     def to_publish(self):
         browser.element('[type=submit]').click()
         return self
+
+

@@ -41,3 +41,11 @@ class MainPage:
         browser.element('.header_menu-nav_link .link-tour_create').should(be.visible)
         browser.element('.header_menu-nav_link .link-tour_create').click()
         return self
+
+    def open_my_list_tour_page(self):
+        browser.element('//div[contains(text(), "Мои поездки")]').click()
+        return self
+
+    def open_wallet(self):
+        browser.element('[href="/account/balance"].header_menu-nav_link').click()
+        return self
