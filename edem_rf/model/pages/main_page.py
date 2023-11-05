@@ -20,7 +20,7 @@ class MainPage:
     '''
 
     def load_cookies_in_profile(self):
-        for cookie in pickle.load(open('authorization_cookies', 'rb')):
+        for cookie in pickle.load(open('tests/authorization_cookies', 'rb')):
             browser.driver.add_cookie(cookie)
         time.sleep(5.0)
         browser.driver.refresh()
