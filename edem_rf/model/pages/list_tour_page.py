@@ -4,7 +4,7 @@ from selene import have
 from edem_rf.model.data.data_for_tests import city_to, city_from
 
 
-class ListTour:
+class ListTours:
     def open_tour(self):
         browser.element('.account-routes_list').click()
         return self

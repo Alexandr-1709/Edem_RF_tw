@@ -66,13 +66,3 @@ def test_creating_tour():
 
 
 
-
-# def test_auth_jwt_token():
-# session = requests.Session()
-# link = 'https://xn--d1abb2a.xn--p1ai/auth/login'
-# headers = {
-#     'Authorization': f'Bearer {jwt_token}'
-# }
-# persponce = session.post(link, headers=headers)
-# response_profile = requests.get(profile_url, headers=headers).text
-# print(response_profile)

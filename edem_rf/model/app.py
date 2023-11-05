@@ -8,10 +8,12 @@ from edem_rf.model.pages.car_tour_page import CarTourPage
 from edem_rf.model.pages.my_ad_page import MyAd
 from edem_rf.model.pages.my_car_page import MyCar
 from edem_rf.model.pages.my_cart_page import MyCart
-from edem_rf.model.pages.list_tour_page import ListTour
+from edem_rf.model.pages.list_tour_page import ListTours
+from edem_rf.model.pages.pay_posting_page import PayPosting
 from edem_rf.model.pages.payment_method_page import PaymentMethod
 from edem_rf.model.pages.price_tour_page import PriceTour
 from edem_rf.model.pages.tour_id_page import TourID
+from edem_rf.model.pages.wallet_page import Wallet
 
 main_page = MainPage()
 car_tour_page = CarTourPage()
@@ -24,6 +26,8 @@ price_tour = PriceTour()
 payment_method = PaymentMethod()
 my_cart = MyCart()
 my_ad = MyAd()
-list_tour = ListTour()
+list_tour = ListTours()
 tour_id = TourID()
 edit_tour = EditTour()
+pay_posting = PayPosting()
+wallet = Wallet()

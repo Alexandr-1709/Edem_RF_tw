@@ -1,6 +1,5 @@
 import pickle
 import time
-
 from selene.support.shared import browser
 from selene import be, have
 
@@ -49,3 +48,5 @@ class MainPage:
     def open_wallet(self):
         browser.element('[href="/account/balance"].header_menu-nav_link').click()
         return self
+
+

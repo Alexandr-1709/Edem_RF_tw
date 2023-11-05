@@ -1,7 +1,6 @@
 import allure
 from selene.support.shared import browser
 from selene import be, command
-
 from edem_rf.model.data.data_for_tests import city_from, city_to
 
 
@@ -41,3 +40,4 @@ class CarTourPage:
                 .perform(command.js.scroll_into_view)
             browser.element('[type="submit"]') \
                 .click()
+        return self

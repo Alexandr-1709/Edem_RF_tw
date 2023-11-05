@@ -37,4 +37,4 @@ def test_remove_tour():
     with allure.step('Проверка отсутсвия поездок'):
         app.list_tour.check_empty_list_tour()
 
-    time.sleep(10)
+
