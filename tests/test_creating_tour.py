@@ -14,6 +14,7 @@ def test_creating_tour():
     # GIVEN
     with allure.step('Открыть главную страницу'):
         app.main_page.open_page()
+    time.sleep(5)
     with allure.step('Загрузка cookies'):
         app.main_page.load_cookies_in_profile()
     with allure.step('Открыть бургер-меню'):
