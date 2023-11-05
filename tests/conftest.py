@@ -24,8 +24,8 @@ def driver_management_remote():
     browser.config.driver = driver
     browser.config.hold_driver_at_exit = False
     browser.config.base_url = base_url
-    browser.config.window_width = 1920
-    browser.config.window_height = 1080
+    browser.config.window_width = 1150
+    browser.config.window_height = 800
     browser.config.timeout = 5.0
 
     yield browser
